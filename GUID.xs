@@ -27,7 +27,12 @@ CreateGuid()
 		sprintf (buffer, "%04X", (int) guid.Data3);
 		strcat (strcat (ret, buffer), "-");		
 		
-		for (c = 0; c != 8; c++){
+		for (c = 0; c != 2; c++){
+			sprintf (buffer, "%02X", (int) guid.Data4[c]);
+			strcat (ret, buffer);
+		}
+		strcat (ret, "-"); 
+		for (c = 2; c != 8; c++){
 			sprintf (buffer, "%02X", (int) guid.Data4[c]);
 			strcat (ret, buffer);
 		}

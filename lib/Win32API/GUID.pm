@@ -7,7 +7,7 @@ require Exporter;
 our @ISA = qw (Exporter);
 our @EXPORT = qw (CreateGuid);
 
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 require XSLoader;
 XSLoader::load('Win32API::GUID', $VERSION);
